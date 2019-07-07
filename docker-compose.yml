@@ -1,0 +1,13 @@
+version: "3.6"
+
+services:
+  scala:
+    container_name: scala
+    build:
+      context: .
+    volumes:
+      - ./build.sbt:/root/app/build.sbt
+      - ./src:/root/app/src
+      - ./project:/root/app/project
+    stdin_open: true
+    tty: true
